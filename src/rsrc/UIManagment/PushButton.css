@@ -1,0 +1,52 @@
+/*******************************************************************************
+ *                                                                             *
+ * Push Button                                                                 *
+ *                                                                             *
+ ******************************************************************************/
+ 
+.button {
+    -fx-border-width:0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 13pt;
+    -fx-background-radius: 5 5 5 5;
+    -fx-text-fill: #d8d8d8;
+}
+ 
+.button:hover{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-width:4;
+}
+ 
+.button:pressed, .button:default:hover:pressed
+{
+  -fx-background-color: black;
+  -fx-text-fill: #1d1d1d;
+}
+ 
+.button:focused
+{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+   
+}
+ 
+.button:disabled, .button:default:disabled
+{
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+ 
+.button:default
+{
+    -fx-background-color: radial-gradient(radius 100%,#2C6CFF, #3975FF,#3975FF,#2C6CFF);
+    -fx-text-fill: #ffffff;
+}
+ 
+.button:default:hover{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
