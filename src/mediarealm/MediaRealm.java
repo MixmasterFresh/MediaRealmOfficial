@@ -17,7 +17,7 @@ public class MediaRealm extends Application {
        Parent root = null;
        primaryStage.initStyle(StageStyle.UNDECORATED);
         try {
-         root = FXMLLoader.load(getClass().getResource("/rsrc/UIManagment/DefaultState.fxml"));
+         root = FXMLLoader.load(getClass().getResource("/res/UIManagment/DefaultState.fxml"));
         } catch (IOException ex) {
          Logger.getLogger(MediaRealm.class.getName()).log(Level.SEVERE, null, ex);
         }
