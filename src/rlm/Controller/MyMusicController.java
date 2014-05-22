@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 
+
+/*The event handler for the myMusic Button*/
 public class MyMusicController implements EventHandler
 {
 
