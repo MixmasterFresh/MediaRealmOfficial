@@ -40,12 +40,12 @@
                 <URL value="@PushButton.css" />
               </stylesheets>
             </Button>
-            <Button alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="329.00001525878906" prefWidth="577.0" text="Pandora" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.margin="$x1" GridPane.rowIndex="5">
+            <Button alignment="CENTER_LEFT" fx:id="Pandora" mnemonicParsing="false" prefHeight="329.00001525878906" prefWidth="577.0" text="Pandora" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.margin="$x1" GridPane.rowIndex="5">
               <stylesheets>
                 <URL value="@PushButton.css" />
               </stylesheets>
             </Button>
-            <Button alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="108.0" prefWidth="205.0" text="Sound Cloud" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.margin="$x1" GridPane.rowIndex="6">
+            <Button alignment="CENTER_LEFT" fx:id="SoundCloud"  mnemonicParsing="false" prefHeight="108.0" prefWidth="205.0" text="Sound Cloud" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.margin="$x1" GridPane.rowIndex="6">
               <stylesheets>
                 <URL value="@PushButton.css" />
               </stylesheets>
@@ -92,7 +92,7 @@
       <children>
         <ScrollPane id="ScrollPanel" fitToHeight="true" fitToWidth="true" prefHeight="670.0" prefWidth="1114.0000999999975" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="0.0">
           <content>
-            <StackPane id="ContentPanel" depthTest="INHERIT" focusTraversable="true" mouseTransparent="false" prefHeight="681.0" prefWidth="1105.0">
+            <StackPane fx:id="ContentPanel" depthTest="INHERIT" focusTraversable="true" mouseTransparent="false" prefHeight="681.0" prefWidth="1105.0">
               <stylesheets>
                 <URL value="@ScrollPane.css" />
               </stylesheets>
