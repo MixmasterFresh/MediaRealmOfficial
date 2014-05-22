@@ -11,7 +11,7 @@
 <?import javafx.scene.text.*?>
 <?scenebuilder-background-color 0x0f0f0fff?>
 
-<AnchorPane id="MainPanel" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" prefHeight="720.0" prefWidth="1280.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<AnchorPane id="MainPanel" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" prefHeight="720.0" prefWidth="1280.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="rlm.Controller.Controller">
   <children>
     <AnchorPane id="OptionsPanel" cache="false" prefHeight="691.0" prefWidth="151.00009999999747" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1128.0" AnchorPane.topAnchor="30.0">
       <children>
@@ -88,7 +88,7 @@
         <URL value="@leftpan.css" />
       </stylesheets>
     </AnchorPane>
-    <AnchorPane id="ContentFrame" prefHeight="677.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="152.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+    <AnchorPane id="ContentFrame" prefHeight="688.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="152.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
       <children>
         <ScrollPane id="ScrollPanel" fitToHeight="true" fitToWidth="true" prefHeight="670.0" prefWidth="1114.0000999999975" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="0.0">
           <content>
@@ -107,8 +107,20 @@
         <InnerShadow choke="0.45238095238095233" height="43.27391803075396" radius="21.13695901537698" width="43.27391803075396" />
       </effect>
     </AnchorPane>
-    <Button id="ExitButton" layoutY="9.0" minHeight="16.0" minWidth="19.999999046325684" mnemonicParsing="false" prefHeight="16.0" prefWidth="19.999999046325684" text="Button" AnchorPane.rightAnchor="26.0" />
-    <Button layoutY="9.0" minHeight="16.0" minWidth="19.999999046325684" mnemonicParsing="false" prefHeight="16.0" prefWidth="19.999999046325684" text="Button" AnchorPane.rightAnchor="64.0" />
-    <Button layoutY="9.0" minHeight="16.0" minWidth="20.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="20.0" text="Button" AnchorPane.rightAnchor="103.0" />
+    <Button id="ExitButton" layoutY="9.0" minHeight="16.0" minWidth="19.999999046325684" mnemonicParsing="false" prefHeight="16.0" prefWidth="19.999999046325684" text="Button" AnchorPane.rightAnchor="26.0">
+      <stylesheets>
+        <URL value="@TitleBarButton.css" />
+      </stylesheets>
+    </Button>
+    <Button layoutY="9.0" minHeight="16.0" minWidth="19.999999046325684" mnemonicParsing="false" prefHeight="16.0" prefWidth="19.999999046325684" text="Button" AnchorPane.rightAnchor="64.0">
+      <stylesheets>
+        <URL value="@TitleBarButton.css" />
+      </stylesheets>
+    </Button>
+    <Button layoutY="9.0" minHeight="16.0" minWidth="20.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="20.0" text="Button" AnchorPane.rightAnchor="103.0">
+      <stylesheets>
+        <URL value="@TitleBarButton.css" />
+      </stylesheets>
+    </Button>
   </children>
 </AnchorPane>
