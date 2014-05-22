@@ -2,8 +2,6 @@ package rlm.Controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -14,15 +12,31 @@ to the element. the action listners are instances of the classes that are named 
 */
 public class Controller implements Initializable
 {
-
     @FXML
     private Button myMusic;
-
+    @FXML 
+    private Button myVideos;
+    @FXML
+    private Button Netflix;
+    @FXML 
+    private Button Vimeo;
+    @FXML 
+    private Button SoundCloud;
+    @FXML 
+    private Button  Youtube;
+    @FXML 
+    private Button Pandora;
     @Override 
     public void initialize(URL fxmlFileLocation, ResourceBundle resources)
     {
-        
-        myMusic.setOnAction(new MyMusicController());
-    }
+      myVideos.setOnAction(new MyMusicController());
+      myMusic.setOnAction(new MyMusicController());
+      Youtube.setOnAction(new MyMusicController());
+      Vimeo.setOnAction(new MyMusicController());
+      Netflix.setOnAction(new MyMusicController());
+      Pandora.setOnAction(new MyMusicController());
+     }
+    
+    
     
 }
