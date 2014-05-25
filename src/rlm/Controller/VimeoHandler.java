@@ -6,7 +6,7 @@ import javafx.event.EventHandler;
 
 
 /*The event handler for the myMusic Button*/
-public class MyMusicController implements EventHandler
+public class VimeoHandler implements EventHandler
 {
 
     @Override
@@ -15,4 +15,6 @@ public class MyMusicController implements EventHandler
         System.out.println("Big Fack YOU!!!!");
     }
 
-  }
+    
+    
+}
