@@ -1,0 +1,22 @@
+/*******************************************************************************
+ *                                                                             *
+ * Title Bar Buttons                                                           *
+ *                                                                             *
+ ******************************************************************************/
+ 
+.button 
+{
+	-fx-background-color: white;
+	-fx-border-radius: 20 20 20 20;
+    -fx-background-radius: 20 20 20 20;
+    
+}
+ 
+.button:hover
+{
+    -fx-background-color: black;
+	-fx-text-fill: black;
+    -fx-border-width:4;
+    -fx-border-radius: 20 20 20 20;
+    -fx-background-radius: 20 20 20 20;
+}
