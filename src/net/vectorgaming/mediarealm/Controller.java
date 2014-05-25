@@ -1,4 +1,4 @@
-package mediarealm;
+package net.vectorgaming.mediarealm;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
