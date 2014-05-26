@@ -24,7 +24,7 @@ public class MediaRealm extends Application
       
         try
         {
-            root = FXMLLoader.load(getClass().getResource("/res/UIManagment/DefaultState.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/net/vectorgaming/mediarealm/ui/DefaultState.fxml"));
             root.setStyle("-fx-background-color: #0d0d0d;");
             root.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override

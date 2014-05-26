@@ -11,7 +11,7 @@
 <?import javafx.scene.text.*?>
 <?scenebuilder-background-color 0x0f0f0fff?>
 
-<AnchorPane id="MainPanel" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" prefHeight="720.0" prefWidth="1280.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="rlm.Controller.Controller">
+<AnchorPane id="MainPanel" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" prefHeight="720.0" prefWidth="1280.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="net.vectorgaming.mediarealm.ButtonController">
   <children>
     <AnchorPane id="OptionsPanel" cache="false" prefHeight="691.0" prefWidth="151.00009999999747" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1128.0" AnchorPane.topAnchor="30.0">
       <children>
@@ -19,7 +19,7 @@
           <children>
             <Button fx:id="myMusic" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="265.00000762939453" prefWidth="411.0" text="My Music" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
               <stylesheets>
-                <URL value="@PushButton.css" />
+                <URL value="@css/PushButton.css" />
               </stylesheets>
               <GridPane.margin>
                 <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" fx:id="x1" />
@@ -27,32 +27,32 @@
             </Button>
             <Button fx:id="Youtube" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="699.0000076293945" prefWidth="1202.0" text="Youtube" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.margin="$x1" GridPane.rowIndex="2">
               <stylesheets>
-                <URL value="@PushButton.css" />
+                <URL value="@css/PushButton.css" />
               </stylesheets>
             </Button>
             <Button fx:id="Vimeo" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="442.00001525878906" prefWidth="900.0" text="Vimeo" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.margin="$x1" GridPane.rowIndex="3">
               <stylesheets>
-                <URL value="@PushButton.css" />
+                <URL value="@css/PushButton.css" />
               </stylesheets>
             </Button>
             <Button fx:id="Netflix" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="566.0000152587891" prefWidth="1105.0" text="Netflix" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.margin="$x1" GridPane.rowIndex="4">
               <stylesheets>
-                <URL value="@PushButton.css" />
+                <URL value="@css/PushButton.css" />
               </stylesheets>
             </Button>
-            <Button alignment="CENTER_LEFT" fx:id="Pandora" mnemonicParsing="false" prefHeight="329.00001525878906" prefWidth="577.0" text="Pandora" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.margin="$x1" GridPane.rowIndex="5">
+            <Button fx:id="Pandora" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="329.00001525878906" prefWidth="577.0" text="Pandora" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.margin="$x1" GridPane.rowIndex="5">
               <stylesheets>
-                <URL value="@PushButton.css" />
+                <URL value="@css/PushButton.css" />
               </stylesheets>
             </Button>
-            <Button alignment="CENTER_LEFT" fx:id="SoundCloud"  mnemonicParsing="false" prefHeight="108.0" prefWidth="205.0" text="Sound Cloud" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.margin="$x1" GridPane.rowIndex="6">
+            <Button fx:id="SoundCloud" alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="108.0" prefWidth="205.0" text="Sound Cloud" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.margin="$x1" GridPane.rowIndex="6">
               <stylesheets>
-                <URL value="@PushButton.css" />
+                <URL value="@css/PushButton.css" />
               </stylesheets>
             </Button>
-            <Button alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="185.0" prefWidth="262.0" text="Button" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.margin="$x1" GridPane.rowIndex="7">
+            <Button alignment="CENTER_LEFT" mnemonicParsing="false" prefHeight="185.0" prefWidth="262.0" text="Twitch" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.margin="$x1" GridPane.rowIndex="7">
               <stylesheets>
-                <URL value="@PushButton.css" />
+                <URL value="@css/PushButton.css" />
               </stylesheets>
             </Button>
             <Button fx:id="myVideos" alignment="CENTER_LEFT" contentDisplay="LEFT" mnemonicParsing="false" prefHeight="37.0" prefWidth="483.0" text="My Videos" textAlignment="LEFT" textFill="WHITE" underline="false" wrapText="false" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.margin="$x1" GridPane.rowIndex="0" GridPane.vgrow="ALWAYS">
@@ -60,7 +60,7 @@
                 <Font name="SansSerif Bold" size="12.0" />
               </font>
               <stylesheets>
-                <URL value="@PushButton.css" />
+                <URL value="@css/PushButton.css" />
               </stylesheets>
             </Button>
           </children>
@@ -80,7 +80,7 @@
         </GridPane>
         <TextField layoutX="14.0" layoutY="46.0" prefHeight="31.0" prefWidth="123.0" promptText="Search:">
           <stylesheets>
-            <URL value="@TextField.css" />
+            <URL value="@css/TextField.css" />
           </stylesheets>
         </TextField>
       </children>
@@ -94,12 +94,12 @@
           <content>
             <StackPane fx:id="ContentPanel" depthTest="INHERIT" focusTraversable="true" mouseTransparent="false" prefHeight="681.0" prefWidth="1105.0">
               <stylesheets>
-                <URL value="@ScrollPane.css" />
+                <URL value="@css/ScrollPane.css" />
               </stylesheets>
             </StackPane>
           </content>
           <stylesheets>
-            <URL value="@ScrollPane.css" />
+            <URL value="@css/ScrollPane.css" />
           </stylesheets>
         </ScrollPane>
       </children>
@@ -109,17 +109,17 @@
     </AnchorPane>
     <Button id="ExitButton" layoutY="9.0" minHeight="16.0" minWidth="19.999999046325684" mnemonicParsing="false" prefHeight="16.0" prefWidth="19.999999046325684" text="Button" AnchorPane.rightAnchor="26.0">
       <stylesheets>
-        <URL value="@TitleBarButton.css" />
+        <URL value="@css/TitleBarButton.css" />
       </stylesheets>
     </Button>
     <Button layoutY="9.0" minHeight="16.0" minWidth="19.999999046325684" mnemonicParsing="false" prefHeight="16.0" prefWidth="19.999999046325684" text="Button" AnchorPane.rightAnchor="64.0">
       <stylesheets>
-        <URL value="@TitleBarButton.css" />
+        <URL value="@css/TitleBarButton.css" />
       </stylesheets>
     </Button>
     <Button layoutY="9.0" minHeight="16.0" minWidth="20.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="20.0" text="Button" AnchorPane.rightAnchor="103.0">
       <stylesheets>
-        <URL value="@TitleBarButton.css" />
+        <URL value="@css/TitleBarButton.css" />
       </stylesheets>
     </Button>
   </children>

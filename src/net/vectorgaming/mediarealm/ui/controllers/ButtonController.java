@@ -10,7 +10,7 @@ import javafx.scene.control.Button;
 /*Loads in all of the elements in the FXML file that is needed and assigns action listeners
  to the element. the action listners are instances of the classes that are named accordingly
  */
-public class Controller implements Initializable
+public class ButtonController implements Initializable
 {
     private double xOffset;
     private double yOffset;
