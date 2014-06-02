@@ -43,7 +43,7 @@ public class MyVideoHandler implements EventHandler {
         BufferedReader reader = null;
         File directoriesConfig;
         try {
-            directoriesConfig = new File("/net/vectorgaming/mediarealm/config/Directories.txt");
+            directoriesConfig = new File("C:/Users/XSoloDoloX/Documents/GitHub/MediaRealmOfficial/src/net/vectorgaming/mediarealm/config/Directories.txt");
             reader = new BufferedReader(new FileReader(directoriesConfig));
 
         } 
