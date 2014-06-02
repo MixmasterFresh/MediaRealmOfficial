@@ -11,7 +11,7 @@
 <?import javafx.scene.text.*?>
 <?scenebuilder-background-color 0x0f0f0fff?>
 
-<AnchorPane id="MainPanel" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" prefHeight="720.0" prefWidth="1280.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="net.vectorgaming.mediarealm.ButtonController">
+<AnchorPane id="MainPanel" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" prefHeight="720.0" prefWidth="1280.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="net.vectorgaming.mediarealm.ui.controllers.ButtonController">
   <children>
     <AnchorPane id="OptionsPanel" cache="false" prefHeight="691.0" prefWidth="151.00009999999747" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1128.0" AnchorPane.topAnchor="30.0">
       <children>
@@ -107,7 +107,7 @@
         <InnerShadow choke="0.45238095238095233" height="43.27391803075396" radius="21.13695901537698" width="43.27391803075396" />
       </effect>
     </AnchorPane>
-    <Button id="ExitButton" layoutY="9.0" minHeight="16.0" minWidth="19.999999046325684" mnemonicParsing="false" prefHeight="16.0" prefWidth="19.999999046325684" text="Button" AnchorPane.rightAnchor="26.0">
+    <Button fx:id="ExitButton" layoutY="9.0" minHeight="16.0" minWidth="19.999999046325684" mnemonicParsing="false" prefHeight="16.0" prefWidth="19.999999046325684" text="Button" AnchorPane.rightAnchor="26.0">
       <stylesheets>
         <URL value="@css/TitleBarButton.css" />
       </stylesheets>
