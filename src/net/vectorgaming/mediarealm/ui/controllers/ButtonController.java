@@ -29,6 +29,8 @@ public class ButtonController implements Initializable
     private Button Youtube;
     @FXML
     private Button Pandora;
+    @FXML
+    private Button ExitButton;
 
     @Override
     public void initialize(URL fxmlFileLocation, ResourceBundle resources)
@@ -39,5 +41,6 @@ public class ButtonController implements Initializable
         Vimeo.setOnAction(new VimeoHandler());
         Netflix.setOnAction(new NetflixHandler());
         Pandora.setOnAction(new PandoraHandler());
+        ExitButton.setOnAction(new ExitButtonHandler());
     }
 }
