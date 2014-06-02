@@ -13,8 +13,7 @@ import javafx.event.EventHandler;
 
 
 /*The event handler for the myVideo Button*/
-public class MyVideoHandler implements EventHandler
-{
+public class MyVideoHandler implements EventHandler {
 
     private ArrayList<String> directories;
     public static boolean needScan = true;
@@ -22,12 +21,10 @@ public class MyVideoHandler implements EventHandler
     //public static ArrayList <VideoButtons> videoButtonsList = new ArrayList<VideoButtons>();
 
     @Override
-    public void handle(Event t)
-    {
+    public void handle(Event t) {
 
         //implement cleaning of flowpane
-        if (needScan)
-        {
+        if (needScan) {
             getDirectories();
             loadFiles();
         }
@@ -39,46 +36,49 @@ public class MyVideoHandler implements EventHandler
      it into the directories Array
      */
 
-    private void getDirectories()
-    {
+    private void getDirectories() {
         directories = new ArrayList<String>();
         int counter = 0;
         String line;
         BufferedReader reader = null;
         File directoriesConfig;
-        try
-        {
+        try {
             directoriesConfig = new File("/net/vectorgaming/mediarealm/config/Directories.txt");
             reader = new BufferedReader(new FileReader(directoriesConfig));
-            while (reader.ready())
+
+        } 
+        catch (FileNotFoundException ex) 
+        {
+            Logger.getLogger(MyVideoHandler.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try 
+        {
+            while (reader.ready()) 
             {
                 line = reader.readLine();
                 System.out.println(line);
                 directories.add(line);
             }
+        } 
+        catch (IOException e) 
+        {
 
         }
-        catch (FileNotFoundException ex | IOException e)
-        {
-            Logger.getLogger(MyVideoHandler.class.getName()).log(Level.SEVERE, null, ex);
-            }
 
-        }
-        /*Scans the directories given in the @directorie array  for video files
-         and with each file found creates an object 
-         and loads said object into an arrayList @VideoPointers*/
-    private void loadFiles()
-    {
-        for (String directory : directories)
-        {
+    }
+    /*Scans the directories given in the @directorie array  for video files
+     and with each file found creates an object 
+     and loads said object into an arrayList @VideoPointers*/
+
+    private void loadFiles() {
+        for (String directory : directories) {
 
         }
     }
 
     /*adds all the buttons in the Arraylist @videoButtonsList to  
      the flow pane located in the content pane*/
-    private void addButtons()
-    {
+    private void addButtons() {
 
     }
 }
