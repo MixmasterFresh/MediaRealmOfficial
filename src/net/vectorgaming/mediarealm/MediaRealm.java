@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import net.vectorgaming.mediarealm.framework.Settings;
 
 public class MediaRealm extends Application
 {
@@ -19,6 +20,7 @@ public class MediaRealm extends Application
     @Override
     public void start(final Stage primaryStage)
     {   
+        
         Parent root = null;
         primaryStage.initStyle(StageStyle.UNDECORATED);
       
@@ -48,6 +50,7 @@ public class MediaRealm extends Application
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
         primaryStage.show();
+        Settings.init();
     }
 
     public static void main(String[] args)
