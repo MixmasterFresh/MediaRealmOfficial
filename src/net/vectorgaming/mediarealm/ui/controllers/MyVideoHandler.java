@@ -1,13 +1,5 @@
 package net.vectorgaming.mediarealm.ui.controllers;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import net.vectorgaming.mediarealm.util.FileUtils;
@@ -15,8 +7,6 @@ import net.vectorgaming.mediarealm.util.FileUtils;
 /*The event handler for the myVideo Button*/
 public class MyVideoHandler implements EventHandler
 {
-
-    private ArrayList<String> directories;
     public static boolean needScan = true;
    
     //Creat class and package location for the VideoButtons Class
@@ -29,52 +19,14 @@ public class MyVideoHandler implements EventHandler
         //implement cleaning of flowpane
         if (needScan)
         {
-            
             FileUtils.scanDirs();
             needScan = false;
         }
         addButtons();
     }
 
-    /*Scans the file "Directories" loacted in net\vectorgaming\mediarealm\config
-     and for each directory found creates a string with the directory and loads 
-     it into the directories Array
-     */
-    private void getDirectories()
-    {
-        directories = new ArrayList<String>();
-        int counter = 0;
-        String line;
-        BufferedReader reader = null;
-        File directoriesConfig;
-        try
-        {
-            directoriesConfig = new File("C:/Users/XSoloDoloX/Documents/GitHub/MediaRealmOfficial/src/net/vectorgaming/mediarealm/config/Directories.txt");
-            reader = new BufferedReader(new FileReader(directoriesConfig));
-
-        }
-        catch (FileNotFoundException ex)
-        {
-            Logger.getLogger(MyVideoHandler.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        try
-        {
-            while (reader.ready())
-            {
-                line = reader.readLine();
-                System.out.println(line);
-                directories.add(line);
-            }
-        }
-        catch (IOException e)
-        {
-
-        }
-
-    }
-
     
-
+  
     /*adds all the buttons in the Arraylist @videoButtonsList to  
      the flow pane located in the content pane*/
     private void addButtons()
