@@ -11,7 +11,7 @@
 <?import javafx.scene.text.*?>
 <?scenebuilder-background-color 0x0f0f0fff?>
 
-<AnchorPane id="MainPanel" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" prefHeight="720.0" prefWidth="1280.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="net.vectorgaming.mediarealm.ui.controllers.ButtonController">
+<AnchorPane id="MainPanel" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" prefHeight="720.0" prefWidth="1280.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="net.vectorgaming.mediarealm.ui.controllers.ComponentController">
   <children>
     <AnchorPane id="OptionsPanel" cache="false" prefHeight="691.0" prefWidth="151.00009999999747" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1128.0" AnchorPane.topAnchor="30.0">
       <children>
@@ -92,11 +92,11 @@
       <children>
         <ScrollPane id="ScrollPanel" fitToHeight="true" fitToWidth="true" prefHeight="670.0" prefWidth="1114.0000999999975" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="0.0">
           <content>
-            <StackPane fx:id="ContentPanel" depthTest="INHERIT" focusTraversable="true" mouseTransparent="false" prefHeight="681.0" prefWidth="1105.0">
+            <FlowPane fx:id="ContentPanel" depthTest="INHERIT" focusTraversable="true" mouseTransparent="false" prefHeight="681.0" prefWidth="1105.0">
               <stylesheets>
                 <URL value="@css/ScrollPane.css" />
               </stylesheets>
-            </StackPane>
+            </FlowPane>
           </content>
           <stylesheets>
             <URL value="@css/ScrollPane.css" />

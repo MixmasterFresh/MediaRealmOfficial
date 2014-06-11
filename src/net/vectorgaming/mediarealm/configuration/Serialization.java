@@ -17,10 +17,12 @@ import net.vectorgaming.mediarealm.framework.Settings;
  */
 public class Serialization
 {
+    //Change param type for more abstract usage
     public static void serialize(Settings settings)
     {
         try
         {
+            //Change to The Appdata location once ready for deploy
             File f = new File("settings"+File.separator+"settings.rlm");
             if(!f.exists())
             {

@@ -8,6 +8,7 @@ package net.vectorgaming.mediarealm.util;
 
 import java.io.File;
 import java.util.ArrayList;
+import net.vectorgaming.mediarealm.contentpanelobjects.VideoContentButton;
 import net.vectorgaming.mediarealm.framework.Settings;
 import org.apache.commons.io.FilenameUtils;
 
@@ -17,6 +18,8 @@ import org.apache.commons.io.FilenameUtils;
  */
 public class FileUtils
 {
+     public static ArrayList <VideoContentButton> VideoButtonList = new ArrayList<VideoContentButton>();
+    
      private static final String[] EXTENSIONS_VIDEO =
     {
         "3g2",
@@ -100,7 +103,7 @@ public class FileUtils
         }
     }
 
-    public static void scanSubDirs(File[] files)
+    private static void scanSubDirs(File[] files)
     {
         if (files != null)
         {
@@ -117,6 +120,7 @@ public class FileUtils
                     if (FilenameUtils.getExtension(f.getName()).equalsIgnoreCase(name))
                     {
                         System.out.println(f.getAbsolutePath());
+                        VideoButtonList.add(new VideoContentButton ( f.getName(), f.getAbsolutePath()));
                         
                     }
                 }

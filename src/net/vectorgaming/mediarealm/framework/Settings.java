@@ -24,7 +24,8 @@ public class Settings implements Serializable
     public Settings()
     {
         directories = new ArrayList<>();
-        directories.add("C:/Users/appam_000/Downloads");
+        directories.add("C:/Users/XSoloDoloX/Downloads");
+        directories.add("C:/Users/XSoloDoloX/Videos");
     }
     
     public static void init()
