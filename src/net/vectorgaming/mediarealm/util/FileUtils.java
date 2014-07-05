@@ -3,10 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package net.vectorgaming.mediarealm.util;
 
+import com.xuggle.mediatool.IMediaReader;
+import com.xuggle.mediatool.ToolFactory;
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import net.vectorgaming.mediarealm.contentpanelobjects.VideoContentButton;
 import net.vectorgaming.mediarealm.framework.Settings;
@@ -18,9 +20,10 @@ import org.apache.commons.io.FilenameUtils;
  */
 public class FileUtils
 {
-     public static ArrayList <VideoContentButton> VideoButtonList = new ArrayList<VideoContentButton>();
-    
-     private static final String[] EXTENSIONS_VIDEO =
+
+    public static ArrayList<VideoContentButton> VideoButtonList = new ArrayList<VideoContentButton>();
+
+    private static final String[] EXTENSIONS_VIDEO =
     {
         "3g2",
         "3gp",
@@ -29,7 +32,6 @@ public class FileUtils
         "amv",
         "asf",
         "avi",
-        "bin",
         "divx",
         "drc",
         "dv",
@@ -37,7 +39,6 @@ public class FileUtils
         "flv",
         "gvi",
         "gxf",
-        "iso",
         "m1v",
         "m2v",
         "m2t",
@@ -84,14 +85,15 @@ public class FileUtils
     /*Scans the directories given in the @directory array  for video files
      and with each file found creates an object 
      and loads said object into an arrayList @VideoPointers*/
-    public static void scanDirs( )
+
+    public static void scanDirs() throws IOException
     {
-        if(Settings.getInstance() == null)
+        if (Settings.getInstance() == null)
         {
             System.out.println("Settings null");
         }
-        
-        if(Settings.getInstance().getDirectories() == null)
+
+        if (Settings.getInstance().getDirectories() == null)
         {
             System.out.println("Dirs null");
         }
@@ -103,7 +105,7 @@ public class FileUtils
         }
     }
 
-    private static void scanSubDirs(File[] files)
+    private static void scanSubDirs(File[] files) throws IOException
     {
         if (files != null)
         {
@@ -120,12 +122,25 @@ public class FileUtils
                     if (FilenameUtils.getExtension(f.getName()).equalsIgnoreCase(name))
                     {
                         System.out.println(f.getAbsolutePath());
-                        VideoButtonList.add(new VideoContentButton ( f.getName(), f.getAbsolutePath()));
-                        
+                        VideoButtonList.add(new VideoContentButton(f.getName(), f.getAbsolutePath()));
+
                     }
                 }
             }
 
         }
     }
+
+    public static void createThumbnail(String directory) throws IOException
+    {
+
+        IMediaReader reader = ToolFactory.makeReader(directory);
+        reader.addListener(new VideoPictureListener());
+        reader.open();
+        while (reader.readPacket() == null)
+        {
+        }
+
+    }
+
 }

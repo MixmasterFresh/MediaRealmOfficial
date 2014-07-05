@@ -12,11 +12,12 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import net.vectorgaming.mediarealm.framework.Settings;
-
+import net.vectorgaming.mediarealm.util.OsUtils;
 public class MediaRealm extends Application
 {
    private double xOffset;
    private double yOffset;
+   
     @Override
     public void start(final Stage primaryStage)
     {   
@@ -26,6 +27,8 @@ public class MediaRealm extends Application
       
         try
         {
+            OsUtils.scanOS();
+            System.out.println(OsUtils.osType);
             root = FXMLLoader.load(getClass().getResource("/net/vectorgaming/mediarealm/ui/DefaultState.fxml"));
             root.setStyle("-fx-background-color: #0d0d0d;");
             root.setOnMousePressed(new EventHandler<MouseEvent>() {

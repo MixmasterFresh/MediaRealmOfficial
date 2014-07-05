@@ -5,7 +5,9 @@
  */
 package net.vectorgaming.mediarealm.contentpanelobjects;
 
+import java.io.IOException;
 import javafx.scene.control.Button;
+import net.vectorgaming.mediarealm.util.FileUtils;
 
 /**
  *
@@ -18,12 +20,13 @@ public class VideoContentButton
     private String path;
     private Button videoButton;
 
-    public VideoContentButton(String title, String path)
+    public VideoContentButton(String title, String path) throws IOException
     {
         this.title = title;
         this.path = path;
         videoButton = new Button(title);
         videoButton.setPrefSize(175, 265);
+        setButtonImage();
 
     }
 
@@ -32,14 +35,11 @@ public class VideoContentButton
         return videoButton;
     }
 
-    private void setButtonImage()
+    private void setButtonImage() throws IOException
     {
-        scanThumbNail();
+       FileUtils.createThumbnail(path);
     }
 
-    private void scanThumbNail()
-    {
-
-    }
+   
 
 }

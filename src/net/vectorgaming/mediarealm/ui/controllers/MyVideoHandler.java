@@ -1,5 +1,8 @@
 package net.vectorgaming.mediarealm.ui.controllers;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import net.vectorgaming.mediarealm.contentpanelobjects.VideoContentButton;
@@ -20,7 +23,14 @@ public class MyVideoHandler implements EventHandler
         //implement cleaning of flowpane
         if (needScan)
         {
-            FileUtils.scanDirs();
+            try
+            {
+                FileUtils.scanDirs();
+            }
+            catch (IOException ex)
+            {
+                Logger.getLogger(MyVideoHandler.class.getName()).log(Level.SEVERE, null, ex);
+            }
             needScan = false;
         }
         addButtons();
