@@ -7,6 +7,7 @@ package net.vectorgaming.mediarealm.util;
 
 import com.xuggle.mediatool.IMediaReader;
 import com.xuggle.mediatool.ToolFactory;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,10 +23,8 @@ public class FileUtils
 {
 
     public static ArrayList<VideoContentButton> VideoButtonList = new ArrayList<VideoContentButton>();
-
     private static final String[] EXTENSIONS_VIDEO =
-    {
-        "3g2",
+    {   "3g2",
         "3gp",
         "3gp2",
         "3gpp",
@@ -131,15 +130,16 @@ public class FileUtils
         }
     }
 
+   
     public static void createThumbnail(String directory) throws IOException
     {
 
         IMediaReader reader = ToolFactory.makeReader(directory);
-        reader.addListener(new VideoPictureListener());
-        reader.open();
-        while (reader.readPacket() == null)
-        {
-        }
+        reader.setBufferedImageTypeToGenerate(BufferedImage.TYPE_3BYTE_BGR);
+        reader.addListener(new ImageSnapListener());
+        while(reader.readPacket() == null);
+       
+        
 
     }
 
